@@ -12,8 +12,8 @@ class MP3Importer
     @files = names.collect {|name| name[@path.length + 1, name.length]}
   end
 
-  def import(name)
-    Song.new_by_filename(name)
+  def import
+    @files.each {|name| Song.new_by_filename(name)}
     # create songs from a file name and import into the library
   end
 end
