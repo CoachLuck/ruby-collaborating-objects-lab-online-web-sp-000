@@ -1,6 +1,5 @@
 class MP3Importer
   attr_accessor :path
-  @@files = []
   def initialize(path)
     # get all .mp3 files and add to @files
     @path = path
@@ -14,7 +13,7 @@ class MP3Importer
   end
 
   def import
-    @@files.flatten.each {|name| Song.new_by_filename(name)}
+    self.files.each {|name| Song.new_by_filename(name)}
     # create songs from a file name and import into the library
   end
 end
