@@ -11,7 +11,7 @@ class MP3Importer
     names = Dir["#{path}/*.mp3"]
     @size = names.length
     names = names.collect {|name| name[@path.length + 1, name.length]}
-    puts "#{names}"
+    @files = names
   end
 
   def import
