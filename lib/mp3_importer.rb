@@ -3,7 +3,6 @@ class MP3Importer
   def initialize(path)
     # get all .mp3 files and add to @files
     @path = path
-    @files = []
   end
 
   def files
@@ -14,6 +13,5 @@ class MP3Importer
 
   def import
     self.files.each {|name| Song.new_by_filename(name)}
-    # create songs from a file name and import into the library
   end
 end
