@@ -17,11 +17,11 @@ class Artist
   end
 
   def songs
-    Song.all.select {|song| song.artist = self }
+    Song.all.select {|song| song.artist == self }
   end
 
-  def find_or_create_by_name(name)
-    add_song(Song.new(name)) if !Song.all.include?(name)
+  def self.find_or_create_by_name(name)
+    artist = @@all.select {|artist| artist.name == artist}
   end
 
 end
