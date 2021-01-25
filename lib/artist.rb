@@ -22,6 +22,7 @@ class Artist
 
   def self.find_or_create_by_name(name)
     artist = @@all.select {|artist| artist.name == artist}
+    Artist.new(name) if artist.nil?
   end
 
 end
