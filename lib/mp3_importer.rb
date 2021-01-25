@@ -9,6 +9,7 @@ class MP3Importer
   def files
     # load all mp3 files and remove path from the name
     name = Dir["#{path}/*.mp3"]
+    puts "#{name}"
   end
 
   def import
