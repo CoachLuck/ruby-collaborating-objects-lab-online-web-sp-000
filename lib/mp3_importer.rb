@@ -10,6 +10,7 @@ class MP3Importer
     # load all mp3 files and remove path from the name
     names = Dir["#{path}/*.mp3"]
     names.collect {|name| name.substring(@path.length)}
+    puts "#{names}"
   end
 
   def import
