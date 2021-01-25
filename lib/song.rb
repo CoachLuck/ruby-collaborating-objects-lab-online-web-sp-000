@@ -21,5 +21,6 @@ class Song
     else
       self.artist.name = name
     end
+    self.artist
   end
 end
