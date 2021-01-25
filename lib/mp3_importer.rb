@@ -10,7 +10,7 @@ class MP3Importer
     # load all mp3 files and remove path from the name
     names = Dir["#{path}/*.mp3"]
     @size = names.length
-    names = names.collect {|name| name[@path.length, name.length]}
+    names = names.collect {|name| name[@path.length + 1, name.length]}
     puts "#{names}"
   end
 
